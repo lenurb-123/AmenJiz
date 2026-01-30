@@ -1,0 +1,7 @@
+{
+  "name": "L'Atelier des Célébrations",
+  "description": "Une expérience immersive et émotionnelle pour commander le gâteau d'anniversaire de vos rêves, alliant luxe accessible et gourmandise absolue.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

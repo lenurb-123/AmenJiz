@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="fr" style="font-size: 16px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Atelier des Célébrations | Haute Pâtisserie Émotionnelle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              vanilla: '#FFF8F0',
+              strawberry: '#D81B60',
+              chocolate: '#4E342E',
+              gold: '#F5C16C',
+              'pastel-pink': '#FCE4EC',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vanilla: #FFF8F0;
+            --strawberry: #D81B60;
+            --chocolate: #4E342E;
+            --gold: #F5C16C;
+            --pastel-pink: #FCE4EC;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--vanilla);
+            color: var(--chocolate);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* RESPONSIVE TYPOGRAPHY */
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 8vw, 4.5rem);
+            line-height: 1.05;
+            font-variant-numeric: oldstyle-nums;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 6vw, 3rem);
+            line-height: 1.15;
+            font-variant-numeric: oldstyle-nums;
+        }
+
+        h3 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.7;
+        }
+
+        .cta-text {
+            font-size: clamp(0.9rem, 2vw, 1.15rem);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .small-text {
+            font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+            line-height: 1.4;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .shadow-premium {
+            box-shadow: 0 30px 70px -15px rgba(78, 52, 46, 0.12);
+        }
+        
+        /* RESPONSIVE CIRCULAR FRAMES */
+        .photo-frame-round {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            border: clamp(6px, 1.5vw, 20px) solid white;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-radius: 9999px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fdfdfd;
+            width: 100%;
+            max-width: clamp(240px, 70vw, 480px);
+            margin: 0 auto;
+        }
+
+        .photo-frame-round img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%; 
+            transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .workshop-bg {
+            background-image: url('https://img.freepik.com/premium-photo/cake-slice-cake-kitchen-counter-with-pink-lights_916626-4447.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .workshop-bg {
+                background-attachment: scroll; /* Performance on mobile */
+            }
+        }
+
+        .hover-lift {
+            transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .hover-lift:hover {
+            transform: scale(1.02) translateY(-10px);
+        }
+
+        .will-change-transform {
+            will-change: transform;
+        }
+
+        /* Prevent text from touching screen edges */
+        .container {
+            padding-left: clamp(1rem, 5vw, 3rem);
+            padding-right: clamp(1rem, 5vw, 3rem);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+<body class="overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>
